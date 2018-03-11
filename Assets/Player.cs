@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour {
 
@@ -33,17 +34,20 @@ public class Player : MonoBehaviour {
 
             Vector3 up = transform.up;
             transform.up = hit.normal;
-            if (Input.GetKeyDown(KeyCode.RightArrow)) {
+            float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            // pole pivots
+            if (h > 0.1f && _turnDir < 0) {
                 _turnForce = Vector3.zero;
                 _turnDir = 1;
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+            else if (h < -0.1f && _turnDir > 0) {
                 _turnForce = Vector3.zero;
                 _turnDir = -1;
             }
-            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) {
-                _turnForce += transform.right * TurnForce * Mass * _turnDir * Time.deltaTime;
-                Character.transform.localEulerAngles += new Vector3(0, 0, _turnDir) * TurnRotatation * Time.deltaTime * -1f;
+
+            if (h > 0.1f || h < -0.1f) {
+                _turnForce += transform.right * TurnForce * Mass * Time.deltaTime * h;
+                Character.transform.localEulerAngles += new Vector3(0, 0, -1f) * TurnRotatation * Time.deltaTime * h;
             } else {
                 _turnForce = Vector3.Lerp(_turnForce, Vector3.zero, 0.01f);
                 Character.transform.localRotation = Quaternion.Lerp(Character.transform.localRotation, Quaternion.identity, 0.01f);
