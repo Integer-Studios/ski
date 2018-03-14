@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class JoystickCamera : MonoBehaviour {
 
@@ -17,15 +18,7 @@ public class JoystickCamera : MonoBehaviour {
     void Update() {
         transform.position += Target.position - _prevTargetPos;
         _prevTargetPos = Target.position;
-        float v = 0,h = 0;
-        if (Input.GetKey(KeyCode.UpArrow))
-            v = 1;
-        else if (Input.GetKey(KeyCode.DownArrow))
-            v = -1;
-        if (Input.GetKey(KeyCode.RightArrow))
-            h = 1;
-        else if (Input.GetKey(KeyCode.LeftArrow))
-            h = -1;
+        float v = CrossPlatformInputManager.GetAxis("RightAnalogY"), h = CrossPlatformInputManager.GetAxis("RightAnalogX");
         transform.RotateAround(Target.position, Vector3.up, h * RotationSpeed * Time.deltaTime);
         transform.RotateAround(Target.position, transform.right, v * RotationSpeed * Time.deltaTime);
 

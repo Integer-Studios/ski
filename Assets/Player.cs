@@ -15,16 +15,7 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        float v = 0, h = 0;
-        if (Input.GetKey(KeyCode.W))
-            v = 1;
-        else if (Input.GetKey(KeyCode.S))
-            v = -1;
-        if (Input.GetKey(KeyCode.D))
-            h = 1;
-        else if (Input.GetKey(KeyCode.A))
-            h = -1;
-
+        float v = CrossPlatformInputManager.GetAxis("Vertical"), h = CrossPlatformInputManager.GetAxis("Horizontal");
         if (Mathf.Abs(v) + Mathf.Abs(h) > 0) {
             _targetForward = (_cam.transform.forward * v + _cam.transform.right * h).normalized;
             _targetForward.y = 0;
