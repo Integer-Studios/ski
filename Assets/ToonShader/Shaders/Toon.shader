@@ -71,7 +71,8 @@
                 float scale = _MaxColor - _MinColor;
                 cel *= scale;
                 cel += _MinColor;
-                col *= cel * _Color;
+                col -= (1-cel);
+                //col *= cel * _Color;
                 col += unity_AmbientSky;
                 #ifdef USELIGHTCOLOR
                 col *= _LightColor0.rgba * _LightColor0.rgba;

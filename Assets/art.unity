@@ -18,9 +18,9 @@ RenderSettings:
   m_FogColor: {r: 0.9117647, g: 0.9709605, b: 1, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 50
-  m_LinearFogEnd: 150
-  m_AmbientSkyColor: {r: 0.3966263, g: 0.6717191, b: 0.9632353, a: 1}
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 70
+  m_AmbientSkyColor: {r: 0.35953718, g: 0.6597768, b: 0.97794116, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -521,7 +521,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -599,7 +599,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -903,7 +903,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -981,7 +981,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -1059,7 +1059,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -1274,9 +1274,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: 0
+    m_NormalBias: 0
+    m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -1358,7 +1358,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -1414,7 +1414,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: dce9b835b0e0b4bd1bee13e344a9f610, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1522,7 +1522,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -1600,7 +1600,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -1756,7 +1756,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -1900,7 +1900,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8573761bbe2bf49f7b77291789111a59, type: 2}
+      objectReference: {fileID: 2100000, guid: 9326d312ee24444b6ad64898522c80f8, type: 2}
     - target: {fileID: 2300000, guid: 6ba3a6505b184724ca21740cff52ea30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
