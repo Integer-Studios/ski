@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnDrag: 1
-  Force: 4
+  Force: 2
   _cam: {fileID: 1652461682}
 --- !u!1001 &351446082
 Prefab:
