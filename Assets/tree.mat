@@ -67,7 +67,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _MaxColor: 0.464
+    - _MaxColor: 0.693
     - _Metallic: 0
     - _MinColor: 0.071
     - _Mode: 0

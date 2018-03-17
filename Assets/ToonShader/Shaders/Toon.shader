@@ -3,7 +3,6 @@
     Properties
     {
         _Color("Color", Color) = (1, 1, 1, 1)
-        _LightColor("Light Color", Color) = (1, 1, 1, 1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _CelShadingLevels ("Cel Shading Levels", Range(0,15)) = 5
         _MaxColor ("Highlight Color", Range(0,1)) = 0.9
@@ -73,7 +72,7 @@
                 cel *= scale;
                 cel += _MinColor;
                 col *= cel * _Color;
-                col += _LightColor;
+                col += unity_AmbientSky;
                 #ifdef USELIGHTCOLOR
                 col *= _LightColor0.rgba * _LightColor0.rgba;
                 #endif
