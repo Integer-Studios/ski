@@ -23,7 +23,6 @@ public class BallPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-        transform.forward = _rigidbody.velocity;
         float v = CrossPlatformInputManager.GetAxis("Vertical"), h = CrossPlatformInputManager.GetAxis("Horizontal");
         Vector3 targetForce = (_cam.transform.forward * v + _cam.transform.right * h).normalized;
         RaycastHit hit;
@@ -39,7 +38,7 @@ public class BallPlayer : MonoBehaviour {
         _rigidbody.velocity = _rigidbody.velocity.normalized * mag;
 
         Character.transform.forward = Vector3.Lerp(Character.transform.forward, targetForce.normalized, 1/SkidDamping);
-        Character.transform.position = transform.position;
+        //Character.transform.position = transform.position;
 
 	}
 }
